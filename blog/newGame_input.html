@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>记录新的对局</title>
+{% load staticfiles %}
+<link href="{% static "css/jquery.mobile.theme-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<link href="{% static "css/jquery.mobile.structure-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<script src="{% static "js/jquery-1.6.4.min.js" %}" type="text/javascript"></script>
+<script src="{% static "js/jquery.mobile-1.0.min.js" %}" type="text/javascript"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1><a href="/newGame/?currentID={{currentID}}" data-role="button">返回上一页</a>当前战况：{{currentID}}</h1>
+  </div>
+  <div data-role="content">
+    <form action="http:\\127.0.0.1:8000\newGame\inputData\" method="get">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <input type="checkbox" name="cb_lz" id="checkbox4_2" class="custom" value="" />
+        <label for="checkbox4_2">流局</label>
+      </fieldset>
+    </div>
+  	
+  <hr />
+  <div data-role="fieldcontain">
+    <label for="textinput">{{playerName1}}</label><p></p>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+          <input type="checkbox" name="cb_A_Fan_1" id="checkbox0_p_0" class="custom" value="" />
+          <label for="checkbox0_p_0">1</label>
+          <input type="checkbox" name="cb_A_Fan_2" id="checkbox0_p_1" class="custom" value="" />
+          <label for="checkbox0_p_1">2</label>
+          <input type="checkbox" name="cb_A_Fan_3" id="checkbox0_p_2" class="custom" value="" />
+          <label for="checkbox0_p_2">3</label>
+          <input type="checkbox" name="cb_A_Fan_4" id="checkbox0_p_3" class="custom" value="" />
+          <label for="checkbox0_p_3">4</label>
+          <input type="checkbox" name="cb_A_Fan_5" id="checkbox0_p_4" class="custom" value="" />
+          <label for="checkbox0_p_4">满</label>
+          <input type="checkbox" name="cb_A_Fan_6" id="checkbox0_p_5" class="custom" value="" />
+          <label for="checkbox0_p_5">跳</label>
+          <input type="checkbox" name="cb_A_Fan_8" id="checkbox0_p_6" class="custom" value="" />
+          <label for="checkbox0_p_6">倍</label>
+          <input type="checkbox" name="cb_A_Fan_11" id="checkbox0_p_7" class="custom" value="" />
+          <label for="checkbox0_p_7">三倍</label>
+          <input type="checkbox" name="cb_A_Fan_13" id="checkbox0_p_8" class="custom" value="" />
+          <label for="checkbox0_p_8">役</label>
+        </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_A_Fu_1" id="checkbox0_f_0" class="custom" value="" />
+          <label for="checkbox0_f_0">20</label>
+          <input type="checkbox" name="cb_A_Fu_2" id="checkbox0_f_1" class="custom" value="" />
+          <label for="checkbox0_f_1">25</label>
+          <input type="checkbox" name="cb_A_Fu_3" id="checkbox0_f_2" class="custom" value="" />
+          <label for="checkbox0_f_2">30</label>
+          <input type="checkbox" name="cb_A_Fu_4" id="checkbox0_f_3" class="custom" value="" />
+          <label for="checkbox0_f_3">40</label>
+          <input type="checkbox" name="cb_A_Fu_5" id="checkbox0_f_4" class="custom" value="" />
+          <label for="checkbox0_f_4">50</label>
+          <input type="checkbox" name="cb_A_Fu_6" id="checkbox0_f_5" class="custom" value="" />
+          <label for="checkbox0_f_5">60</label>
+          <input type="checkbox" name="cb_A_Fu_7" id="checkbox0_f_6" class="custom" value="" />
+          <label for="checkbox0_f_6">70</label>
+          <input type="checkbox" name="cb_A_Fu_8" id="checkbox0_f_7" class="custom" value="" />
+          <label for="checkbox0_f_7">80</label>
+          <input type="checkbox" name="cb_A_Fu_9" id="checkbox0_f_8" class="custom" value="" />
+          <label for="checkbox0_f_8">90</label>
+          <input type="checkbox" name="cb_A_Fu_10" id="checkbox0_f_9" class="custom" value="" />
+          <label for="checkbox0_f_9">100</label>
+          <input type="checkbox" name="cb_A_Fu_11" id="checkbox0_f_10" class="custom" value="" />
+          <label for="checkbox0_f_10">110</label>
+
+         </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_A_0" id="checkbox0_0" class="custom" value="" />
+          <label for="checkbox0_0">和了</label>
+          <input type="checkbox" name="cb_A_1" id="checkbox0_1" class="custom" value="" />
+          <label for="checkbox0_1">自摸</label>
+          <input type="checkbox" name="cb_A_2" id="checkbox0_2" class="custom" value="" />
+          <label for="checkbox0_2">放铳</label>
+          <input type="checkbox" name="cb_A_3" id="checkbox0_3" class="custom" value="" />
+          <label for="checkbox0_3">躺枪</label>
+         </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_A_4" id="checkbox0_4" class="custom" value="" />
+          <label for="checkbox0_4">立直</label>
+          <input type="checkbox" name="cb_A_7" id="checkbox0_7" class="custom" value="" />
+          <label for="checkbox0_7">听牌</label>
+         </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_A_6" id="checkbox0_6" class="custom" value="" />
+          <label for="checkbox0_6">副露</label>
+         </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_A_8" id="checkbox0_8" class="custom" value="" />
+          <label for="checkbox0_8">庄家</label>
+      </fieldset>
+    </div>
+    <hr />
+   <div data-role="fieldcontain">
+    <label for="textinput">{{playerName2}}</label><p></p>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+          <input type="checkbox" name="cb_B_Fan_1" id="checkbox1_p_0" class="custom" value="" />
+          <label for="checkbox1_p_0">1</label>
+          <input type="checkbox" name="cb_B_Fan_2" id="checkbox1_p_1" class="custom" value="" />
+          <label for="checkbox1_p_1">2</label>
+          <input type="checkbox" name="cb_B_Fan_3" id="checkbox1_p_2" class="custom" value="" />
+          <label for="checkbox1_p_2">3</label>
+          <input type="checkbox" name="cb_B_Fan_4" id="checkbox1_p_3" class="custom" value="" />
+          <label for="checkbox1_p_3">4</label>
+          <input type="checkbox" name="cb_B_Fan_5" id="checkbox1_p_4" class="custom" value="" />
+          <label for="checkbox1_p_4">满</label>
+          <input type="checkbox" name="cb_B_Fan_6" id="checkbox1_p_5" class="custom" value="" />
+          <label for="checkbox1_p_5">跳</label>
+          <input type="checkbox" name="cb_B_Fan_8" id="checkbox1_p_6" class="custom" value="" />
+          <label for="checkbox1_p_6">倍</label>
+          <input type="checkbox" name="cb_B_Fan_11" id="checkbox1_p_7" class="custom" value="" />
+          <label for="checkbox1_p_7">三倍</label>
+          <input type="checkbox" name="cb_B_Fan_13" id="checkbox1_p_8" class="custom" value="" />
+          <label for="checkbox1_p_8">役</label>
+        </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_B_Fu_1" id="checkbox1_f_0" class="custom" value="" />
+          <label for="checkbox1_f_0">20</label>
+          <input type="checkbox" name="cb_B_Fu_2" id="checkbox1_f_1" class="custom" value="" />
+          <label for="checkbox1_f_1">25</label>
+          <input type="checkbox" name="cb_B_Fu_3" id="checkbox1_f_2" class="custom" value="" />
+          <label for="checkbox1_f_2">30</label>
+          <input type="checkbox" name="cb_B_Fu_4" id="checkbox1_f_3" class="custom" value="" />
+          <label for="checkbox1_f_3">40</label>
+          <input type="checkbox" name="cb_B_Fu_5" id="checkbox1_f_4" class="custom" value="" />
+          <label for="checkbox1_f_4">50</label>
+          <input type="checkbox" name="cb_B_Fu_6" id="checkbox1_f_5" class="custom" value="" />
+          <label for="checkbox1_f_5">60</label>
+          <input type="checkbox" name="cb_B_Fu_7" id="checkbox1_f_6" class="custom" value="" />
+          <label for="checkbox1_f_6">70</label>
+          <input type="checkbox" name="cb_B_Fu_8" id="checkbox1_f_7" class="custom" value="" />
+          <label for="checkbox1_f_7">80</label>
+          <input type="checkbox" name="cb_B_Fu_9" id="checkbox1_f_8" class="custom" value="" />
+          <label for="checkbox1_f_8">90</label>
+          <input type="checkbox" name="cb_B_Fu_10" id="checkbox1_f_9" class="custom" value="" />
+          <label for="checkbox1_f_9">100</label>
+          <input type="checkbox" name="cb_B_Fu_11" id="checkbox1_f_10" class="custom" value="" />
+          <label for="checkbox1_f_10">110</label>
+
+         </fieldset>
+      <fieldset data-role="controlgroup" data-type="horizontal">
+      <input type="checkbox" name="cb_B_0" id="checkbox1_0" class="custom" value="" />
+      <label for="checkbox1_0">和了</label>
+      <input type="checkbox" name="cb_B_1" id="checkbox1_1" class="custom" value="" />
+      <label for="checkbox1_1">自摸</label>
+      <input type="checkbox" name="cb_B_2" id="checkbox1_2" class="custom" value="" />
+      <label for="checkbox1_2">放铳</label>
+      <input type="checkbox" name="cb_B_3" id="checkbox1_3" class="custom" value="" />
+      <label for="checkbox1_3">躺枪</label>
+      </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+      <input type="checkbox" name="cb_B_4" id="checkbox1_4" class="custom" value="" />
+      <label for="checkbox1_4">立直</label>
+      
+      <input type="checkbox" name="cb_B_7" id="checkbox1_7" class="custom" value="" />
+      <label for="checkbox1_7">听牌</label>
+      </fieldset>
+      <fieldset data-role="controlgroup" data-type="horizontal"> 
+      <input type="checkbox" name="cb_B_6" id="checkbox1_6" class="custom" value="" />
+      <label for="checkbox1_6">副露</label>
+      </fieldset>
+      <fieldset data-role="controlgroup" data-type="horizontal"> 
+      <input type="checkbox" name="cb_B_8" id="checkbox1_8" class="custom" value="" />
+          <label for="checkbox1_8">庄家</label>
+      
+  </fieldset>
+</div>
+	<hr />
+	<div data-role="fieldcontain">
+    <label for="textinput">{{playerName3}}</label><p></p>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+          <input type="checkbox" name="cb_C_Fan_1" id="checkbox2_p_0" class="custom" value="" />
+          <label for="checkbox2_p_0">1</label>
+          <input type="checkbox" name="cb_C_Fan_2" id="checkbox2_p_1" class="custom" value="" />
+          <label for="checkbox2_p_1">2</label>
+          <input type="checkbox" name="cb_C_Fan_3" id="checkbox2_p_2" class="custom" value="" />
+          <label for="checkbox2_p_2">3</label>
+          <input type="checkbox" name="cb_C_Fan_4" id="checkbox2_p_3" class="custom" value="" />
+          <label for="checkbox2_p_3">4</label>
+          <input type="checkbox" name="cb_C_Fan_5" id="checkbox2_p_4" class="custom" value="" />
+          <label for="checkbox2_p_4">满</label>
+          <input type="checkbox" name="cb_C_Fan_6" id="checkbox2_p_5" class="custom" value="" />
+          <label for="checkbox2_p_5">跳</label>
+          <input type="checkbox" name="cb_C_Fan_8" id="checkbox2_p_6" class="custom" value="" />
+          <label for="checkbox2_p_6">倍</label>
+          <input type="checkbox" name="cb_C_Fan_11" id="checkbox2_p_7" class="custom" value="" />
+          <label for="checkbox2_p_7">三倍</label>
+          <input type="checkbox" name="cb_C_Fan_13" id="checkbox2_p_8" class="custom" value="" />
+          <label for="checkbox2_p_8">役</label>
+        </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_C_Fu_1" id="checkbox2_f_0" class="custom" value="" />
+          <label for="checkbox2_f_0">20</label>
+          <input type="checkbox" name="cb_C_Fu_2" id="checkbox2_f_1" class="custom" value="" />
+          <label for="checkbox2_f_1">25</label>
+          <input type="checkbox" name="cb_C_Fu_3" id="checkbox2_f_2" class="custom" value="" />
+          <label for="checkbox2_f_2">30</label>
+          <input type="checkbox" name="cb_C_Fu_4" id="checkbox2_f_3" class="custom" value="" />
+          <label for="checkbox2_f_3">40</label>
+          <input type="checkbox" name="cb_C_Fu_5" id="checkbox2_f_4" class="custom" value="" />
+          <label for="checkbox2_f_4">50</label>
+          <input type="checkbox" name="cb_C_Fu_6" id="checkbox2_f_5" class="custom" value="" />
+          <label for="checkbox2_f_5">60</label>
+          <input type="checkbox" name="cb_C_Fu_7" id="checkbox2_f_6" class="custom" value="" />
+          <label for="checkbox2_f_6">70</label>
+          <input type="checkbox" name="cb_C_Fu_8" id="checkbox2_f_7" class="custom" value="" />
+          <label for="checkbox2_f_7">80</label>
+          <input type="checkbox" name="cb_C_Fu_9" id="checkbox2_f_8" class="custom" value="" />
+          <label for="checkbox2_f_8">90</label>
+          <input type="checkbox" name="cb_C_Fu_10" id="checkbox2_f_9" class="custom" value="" />
+          <label for="checkbox2_f_9">100</label>
+          <input type="checkbox" name="cb_C_Fu_11" id="checkbox2_f_10" class="custom" value="" />
+          <label for="checkbox2_f_10">110</label>
+
+         </fieldset>
+	  <fieldset data-role="controlgroup" data-type="horizontal">
+	      <input type="checkbox" name="cb_C_0" id="checkbox2_0" class="custom" value="" />
+	      <label for="checkbox2_0">和了</label>
+	      <input type="checkbox" name="cb_C_1" id="checkbox2_1" class="custom" value="" />
+	      <label for="checkbox2_1">自摸</label>
+	      <input type="checkbox" name="cb_C_2" id="checkbox2_2" class="custom" value="" />
+	      <label for="checkbox2_2">放铳</label>
+	      <input type="checkbox" name="cb_C_3" id="checkbox2_3" class="custom" value="" />
+	      <label for="checkbox2_3">躺枪</label>
+          </fieldset>
+        <fieldset data-role="controlgroup" data-type="horizontal"> 
+	         <input type="checkbox" name="cb_C_4" id="checkbox2_4" class="custom" value="" />
+	         <label for="checkbox2_4">立直</label>
+
+           <input type="checkbox" name="cb_C_7" id="checkbox2_7" class="custom" value="" />
+           <label for="checkbox2_7">听牌</label>
+          </fieldset>
+          <fieldset data-role="controlgroup" data-type="horizontal"> 
+	         <input type="checkbox" name="cb_C_6" id="checkbox2_6" class="custom" value="" />
+	         <label for="checkbox2_6">副露</label>
+          </fieldset>
+           <fieldset data-role="controlgroup" data-type="horizontal"> 
+        
+	         <input type="checkbox" name="cb_C_8" id="checkbox2_8" class="custom" value="" />
+           <label for="checkbox2_8">庄家</label>
+      
+      </fieldset>
+    </div>
+<hr />
+<div data-role="fieldcontain">
+    <label for="textinput">{{playerName4}}</label><p></p>
+    <fieldset data-role="controlgroup" data-type="horizontal">
+          <input type="checkbox" name="cb_D_Fan_1" id="checkbox3_p_0" class="custom" value="" />
+          <label for="checkbox3_p_0">1</label>
+          <input type="checkbox" name="cb_D_Fan_2" id="checkbox3_p_1" class="custom" value="" />
+          <label for="checkbox3_p_1">2</label>
+          <input type="checkbox" name="cb_D_Fan_3" id="checkbox3_p_2" class="custom" value="" />
+          <label for="checkbox3_p_2">3</label>
+          <input type="checkbox" name="cb_D_Fan_4" id="checkbox3_p_3" class="custom" value="" />
+          <label for="checkbox3_p_3">4</label>
+          <input type="checkbox" name="cb_D_Fan_5" id="checkbox3_p_4" class="custom" value="" />
+          <label for="checkbox3_p_4">满</label>
+          <input type="checkbox" name="cb_D_Fan_6" id="checkbox3_p_5" class="custom" value="" />
+          <label for="checkbox3_p_5">跳</label>
+          <input type="checkbox" name="cb_D_Fan_8" id="checkbox3_p_6" class="custom" value="" />
+          <label for="checkbox3_p_6">倍</label>
+          <input type="checkbox" name="cb_D_Fan_11" id="checkbox3_p_7" class="custom" value="" />
+          <label for="checkbox3_p_7">三倍</label>
+          <input type="checkbox" name="cb_D_Fan_13" id="checkbox3_p_8" class="custom" value="" />
+          <label for="checkbox3_p_8">役</label>
+        </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+          <input type="checkbox" name="cb_D_Fu_1" id="checkbox3_f_0" class="custom" value="" />
+          <label for="checkbox3_f_0">20</label>
+          <input type="checkbox" name="cb_D_Fu_2" id="checkbox3_f_1" class="custom" value="" />
+          <label for="checkbox3_f_1">25</label>
+          <input type="checkbox" name="cb_D_Fu_3" id="checkbox3_f_2" class="custom" value="" />
+          <label for="checkbox3_f_2">30</label>
+          <input type="checkbox" name="cb_D_Fu_4" id="checkbox3_f_3" class="custom" value="" />
+          <label for="checkbox3_f_3">40</label>
+          <input type="checkbox" name="cb_D_Fu_5" id="checkbox3_f_4" class="custom" value="" />
+          <label for="checkbox3_f_4">50</label>
+          <input type="checkbox" name="cb_D_Fu_6" id="checkbox3_f_5" class="custom" value="" />
+          <label for="checkbox3_f_5">60</label>
+          <input type="checkbox" name="cb_D_Fu_7" id="checkbox3_f_6" class="custom" value="" />
+          <label for="checkbox3_f_6">70</label>
+          <input type="checkbox" name="cb_D_Fu_8" id="checkbox3_f_7" class="custom" value="" />
+          <label for="checkbox3_f_7">80</label>
+          <input type="checkbox" name="cb_D_Fu_9" id="checkbox3_f_8" class="custom" value="" />
+          <label for="checkbox3_f_8">90</label>
+          <input type="checkbox" name="cb_D_Fu_10" id="checkbox3_f_9" class="custom" value="" />
+          <label for="checkbox3_f_9">100</label>
+          <input type="checkbox" name="cb_D_Fu_11" id="checkbox3_f_10" class="custom" value="" />
+          <label for="checkbox3_f_10">110</label>
+
+         </fieldset>
+	  <fieldset data-role="controlgroup" data-type="horizontal">
+	      <input type="checkbox" name="cb_D_0" id="checkbox3_0" class="custom" value="" />
+	      <label for="checkbox3_0">和了</label>
+	      <input type="checkbox" name="cb_D_1" id="checkbox3_1" class="custom" value="" />
+	      <label for="checkbox3_1">自摸</label>
+	      <input type="checkbox" name="cb_D_2" id="checkbox3_2" class="custom" value="" />
+	      <label for="checkbox3_2">放铳</label>
+	      <input type="checkbox" name="cb_D_3" id="checkbox3_3" class="custom" value="" />
+	      <label for="checkbox3_3">躺枪</label>
+          </fieldset>
+         <fieldset data-role="controlgroup" data-type="horizontal"> 
+	      <input type="checkbox" name="cb_D_4" id="checkbox3_4" class="custom" value="" />
+	      <label for="checkbox3_4">立直</label>
+        <input type="checkbox" name="cb_D_7" id="checkbox3_7" class="custom" value="" />
+        <label for="checkbox3_7">听牌</label>
+        </fieldset>
+          <fieldset data-role="controlgroup" data-type="horizontal"> 
+	      <input type="checkbox" name="cb_D_6" id="checkbox3_6" class="custom" value="" />
+	      <label for="checkbox3_6">副露</label>
+        </fieldset>
+          <fieldset data-role="controlgroup" data-type="horizontal"> 
+       <input type="checkbox" name="cb_D_8" id="checkbox3_8" class="custom" value="" />
+          <label for="checkbox3_8">庄家</label>
+	      
+      
+      </fieldset>
+    </div>
+     <input type="text" name="currentID" value="{{currentID}}" />
+	   <input type="submit" value="提交对局" /> <hr /><p></p>
+    </form>
+  </div>
+</div>
+</body>
+</html>

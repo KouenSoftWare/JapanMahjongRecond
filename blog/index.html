@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>主页-功能选择</title>
+
+
+{% load staticfiles %}
+<link href="{% static "css/jquery.mobile.theme-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<link href="{% static "css/jquery.mobile.structure-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<script src="{% static "js/jquery-1.6.4.min.js" %}" type="text/javascript"></script>
+<script src="{% static "js/jquery.mobile-1.0.min.js" %}" type="text/javascript"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header"></div>
+  <div data-role="content">
+
+  	<form action="http:\\127.0.0.1:8000\newGame\" method="get">
+  		<input type="text" name="pA" id="pA" value="{{winPlayer1}}"  />
+  		<input type="text" name="pB" id="pB" value="{{winPlayer2}}"  />
+  		<input type="text" name="pC" id="pC" value="{{winPlayer3}}"  />
+  		<input type="text" name="pD" id="pD" value="{{winPlayer4}}"  />
+  		<input type="submit" value="新的半庄" /> <hr /><p></p>
+  	</form>
+
+  	<a href="/oldGame" data-role="button">旧的半庄</a><hr /><p />
+  	<a href="/playerData/?playerName=''" data-role="button">玩家数据</a><hr /><p />
+  	<a href="/playerRanking" data-role="button">天梯排行</a>
+  </div>
+  <div data-role="footer"></div>
+</div>
+</body>
+</html>

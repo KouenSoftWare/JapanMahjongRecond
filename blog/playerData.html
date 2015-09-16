@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>玩家记录查询</title>
+{% load staticfiles %}
+<link href="{% static "css/jquery.mobile.theme-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<link href="{% static "css/jquery.mobile.structure-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<script src="{% static "js/jquery-1.6.4.min.js" %}" type="text/javascript"></script>
+<script src="{% static "js/jquery.mobile-1.0.min.js" %}" type="text/javascript"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1><a href="/index/" data-role="button">返回</a>玩家个人数据查询</h1>
+  </div>
+  <div data-role="content">
+  	
+    <div data-role="fieldcontain">
+    <form action="http:\\127.0.0.1:8000\playerData\" method="get">
+      <input type="text" name="Text_playerName" id="textinput" value=""  />
+      <input type="submit" value="按玩家ID查询" /> <hr /><p></p>
+    </form>
+    </div>
+
+
+    <table border="1"> 
+  		{% for i in table %}
+    	<tr>
+       		<td>{{ i.a }}</td>
+       		<td>{{ i.b }}</td>
+       		<td>{{ i.c }}</td>
+       	</tr>
+		{% endfor %}
+  	</table>
+
+  </div>
+</div>
+</body>
+</html>

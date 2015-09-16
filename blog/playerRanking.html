@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{{title}}</title>
+{% load staticfiles %}
+<link href="{% static "css/jquery.mobile.theme-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<link href="{% static "css/jquery.mobile.structure-1.0.min.css" %}" rel="stylesheet" type="text/css" />
+<script src="{% static "js/jquery-1.6.4.min.js" %}" type="text/javascript"></script>
+<script src="{% static "js/jquery.mobile-1.0.min.js" %}" type="text/javascript"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>&nbsp;<a href="/index/" data-role="button">返回</a>排行榜</h1>
+  </div>
+  <form action="http:\\127.0.0.1:8000\playerRanking\" method="get">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <input type="radio" name="rankingRadio" id="rankingRadio_0" value="0" />
+        <label for="rankingRadio_0">PT</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_1" value="1" />
+        <label for="rankingRadio_1">Rank</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_2" value="2" />
+        <label for="rankingRadio_2">Level</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_3" value="3" />
+        <label for="rankingRadio_3">对局总数</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_4" value="4" />
+        <label for="rankingRadio_4">获胜比例</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_5" value="5" />
+        <label for="rankingRadio_5">输的比例</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_6" value="6" />
+        <label for="rankingRadio_6">副露</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_7" value="7" />
+        <label for="rankingRadio_7">立直</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_8" value="8" />
+        <label for="rankingRadio_8">听牌</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_9" value="9" />
+        <label for="rankingRadio_9">Top</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_10" value="10" />
+        <label for="rankingRadio_10">Second</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_11" value="11" />
+        <label for="rankingRadio_11">Three</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_12" value="12" />
+        <label for="rankingRadio_12">Four</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_13" value="13" />
+        <label for="rankingRadio_13">被飞</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_14" value="14" />
+        <label for="rankingRadio_14">平均得点</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_15" value="15" />
+        <label for="rankingRadio_15">平均失点</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_16" value="16" />
+        <label for="rankingRadio_16">总得点</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_17" value="17" />
+        <label for="rankingRadio_17">总失点</label>
+        <input type="radio" name="rankingRadio" id="rankingRadio_18" value="18" />
+        <label for="rankingRadio_18">半庄总数</label>
+      </fieldset>
+    </div>
+  <input type="submit" value="查询" /> <hr /><p></p>
+  <table border="1"> 
+    {% for i in rankTable %}
+      <tr>
+        <td>{{ i.a }}</td>
+        <td>{{ i.b }}</td>
+        <td>{{ i.c }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+</body>
+</html>

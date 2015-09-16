@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>新的半庄:{{djid}}</title>
+
+{% load staticfiles %}
+<link href="{% static "css/jquery.mobile.theme-1.0.min.css"  %}"s rel="stylesheet" type="text/css" />
+<link href="{% static "css/jquery.mobile.structure-1.0.min.css"  %}" rel="stylesheet" type="text/css" />
+<script src="{% static "js/jquery-1.6.4.min.js"  %}" type="text/javascript"></script>
+<script src="{% static "js/jquery.mobile-1.0.min.js"  %}" type="text/javascript"></script>
+</head>
+
+<body>
+<div data-role="page" id="newGame">
+  <div data-role="header">
+    <h1><a href="/index" data-role="button">返回上一页</a>当前对局ID:{{currentID}}</h1>
+  </div>
+  <div data-role="content">
+    <div class="ui-grid-c">
+    	<h3>新的半庄</h3>
+      	<div data-role="fieldcontain">
+        	<label for="textinput4">路人甲:{{playerName1}}</label> <p></p>
+        	<label for="textinput3">逗比乙:{{playerName2}}</label> <p></p>
+        </div>
+        <div data-role="fieldcontain">
+        	<label for="textinput2">演员丙:{{playerName3}}</label> <p></p>
+        	<label for="textinput">老千丁:{{playerName4}}</label>  <p></p>
+      	</div>
+  	</div>
+    <div data-role="controlgroup">
+   		<a href="/newGame/view/?currentID={{currentID}}" data-role="button">查看当前对局情况</a><p/>
+   		<a href="/newGame/input/?currentID={{currentID}}" data-role="button">填入新的一局的对局结果</a>
+  	</div>
+  	<table border="1"> 
+  		<tr>
+    		<th>{{djid}}</th>
+    		<th>结算点数</th>
+    		<th>得点</th>
+    		<th>番数</th>
+    		<th>符数</th>
+    		<th>备注</th>
+  		</tr>
+  		{% for i in table %}
+    	<tr>
+       		<td>{{ i.name }}</td>
+       		<td>{{ i.Fpoint }}</td>
+       		<td>{{ i.point }}</td>
+       		<td>{{ i.fan }}</td>
+       		<td>{{ i.fu }}</td>
+       		<td>{{ i.beiju }}</td>
+       	</tr>
+		{% endfor %}
+  	</table>
+  </div>
+  <div data-role="footer">
+    <h4><a href="/newGame/over/?currentID={{currentID}}" data-role="button">统计这局半庄</a></h4>
+  </div>
+</div>
+</body>
+</html>
