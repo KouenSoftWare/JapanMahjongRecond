@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'C:\\Users\\Kouen\\Desktop\\majiangcalc\\blog'
+            os.path.join(BASE_DIR,"blog")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
