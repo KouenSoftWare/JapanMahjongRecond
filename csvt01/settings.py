@@ -103,8 +103,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    'C:\\Users\\Kouen\\Desktop\\majiangcalc\\blog\\static',
+    os.path.join(BASE_DIR, "blog","static"),
 )
 
 
