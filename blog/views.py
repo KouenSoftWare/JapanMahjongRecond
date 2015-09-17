@@ -187,7 +187,7 @@ def playerRanking(req):
 		elif select == 8:
 			dict_person['b'] = table[i].tpAC_ratio
 		elif select == 9:
-			tdict_person['b'] = table[i].top_ratio
+			dict_person['b'] = table[i].top_ratio
 		elif select == 10:
 			dict_person['b'] = table[i].second_ratio
 		elif select == 11:
