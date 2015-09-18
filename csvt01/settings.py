@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            #请把这里的路径替换成本地工程的绝对路径，下面还有一个
+            os.path.join(BASE_DIR,"blog")
             '/Users/jobkouen/Project/JapanMahjongRecond/blog'
         ],
         'APP_DIRS': True,
@@ -105,7 +105,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    #请把这里的路径替换成本地工程的绝对路径，上面还有一个
-    '/Users/jobkouen/Project/JapanMahjongRecond/blog/static',
+    os.path.join(BASE_DIR, "blog","static"),
+
 )
+
+
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
