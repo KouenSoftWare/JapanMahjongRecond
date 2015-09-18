@@ -1,3 +1,4 @@
+#-*- coding: UTF-8 -*-  
 """
 Django settings for csvt01 project.
 
@@ -56,7 +57,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            'C:\\Users\\Kouen\\Desktop\\majiangcalc\\blog'
+            #请把这里的路径替换成本地工程的绝对路径，下面还有一个
+            '/Users/jobkouen/Project/JapanMahjongRecond/blog'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -104,5 +106,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-    'C:\\Users\\Kouen\\Desktop\\majiangcalc\\blog\\static',
+    #请把这里的路径替换成本地工程的绝对路径，上面还有一个
+    '/Users/jobkouen/Project/JapanMahjongRecond/blog/static',
 )
